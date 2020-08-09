@@ -4,28 +4,27 @@
 
 <br>
 
-I wanted to learn about web analytics so I budgeted myself a few hours and built a small analytics system.
+I wanted to learn more about web analytics so I budgeted myself a few hours and built a small analytics system.
 
-It uses a Flask application with a SQLite database and a HTML snippet to collect **anonymous user data** from any website.
+It uses a Flask application with a SQLite database, and a HTML snippet to collect **anonymous user data** from any website.
 
 <br>
 
 ### Features
 
-- Uses a tracking pixel (optionally works without JavaScript)
+- Uses a dynamic tracking pixel (optionally works without JavaScript)
 - Collects information about:
   - What pages users visit
   - Where users are referred from
   - What browsers and screen sizes are used
-- Lets you view time slices of this data
-
+- Lets you view analytics from different time slices
 <br>
 
 ### Snippet
 
 Include this on any page you want to gather analytics from.
 
-Change `website` to wherever you host the Flask application.
+Change `https://example.org` to wherever you host the Flask application.
 
 ```html
 <script>
@@ -93,10 +92,7 @@ Analytics can be viewed at `/analytics`. Search parameters can be passed to view
 
 ### Possible improvements
 
-Hopefully none? This was a self-contained experiment to learn (and teach) something.
-
-- Anonymously track sessions perhaps like [GoatCounter does](https://github.com/zgoat/goatcounter/blob/master/docs/sessions.markdown)
-- Granular tracking (i.e. click events)
+Hopefully none? This was a self-contained experiment to learn more about something 😊
 
 <br>
 
