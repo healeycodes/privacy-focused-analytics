@@ -76,7 +76,7 @@ The tracking pixel is hosted from `/pixel.gif`.
 
 Analytics can be viewed at `/analytics`. Search parameters can be passed to view a time slice.
 
-- (optional) `start` - The start of the time slice in UNIX seconds (inclusion). Defaults to `0`.
+- (optional) `start` - The start of the time slice in UNIX seconds (inclusive). Defaults to `0`.
 - (optional) `end` - The end of the time slice in UNIX seconds. Defaults to current time.
 
 <br>
