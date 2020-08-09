@@ -23,7 +23,9 @@ It uses a Flask application and a HTML snippet to collect **anonymous user data*
 
 ### Snippet
 
-Include this on any page you want to gather analytics from. Change `website` to wherever you host the Flask application.
+Include this on any page you want to gather analytics from.
+
+Change `website` to wherever you host the Flask application.
 
 ```html
 <script>
