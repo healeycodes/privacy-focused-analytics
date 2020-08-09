@@ -1,4 +1,5 @@
 import db
+import sys
 import time
 import base64
 import geoip2.database
@@ -18,9 +19,9 @@ def index():
 
 @app.route("/analytics")
 def analytics():
-    start = int(request.args.get('from', 0))
-    end = int(request.args.get('to', 0))
-    data = db.load()
+    start = int(request.args.get('start', 0))
+    end = int(request.args.get('end', time.time()))
+    data = db.load(start=start, end=end)
     paths = Counter()
     referrers = Counter()
     countries = Counter()
@@ -33,9 +34,11 @@ def analytics():
         devices[page_view['device']] += 1
         resolutions['{}x{}'.format(
             page_view['width'], page_view['height'])] += 1
+    start_formatted = datetime.fromtimestamp(start).strftime("%c")
+    end_formatted = datetime.fromtimestamp(end).strftime("%c")
     return render_template('analytics.html',
-                           start=datetime.fromtimestamp(start).strftime("%c"),
-                           end=datetime.fromtimestamp(end).strftime("%c"),
+                           start=start_formatted,
+                           end=end_formatted,
                            paths=paths.most_common(),
                            referrers=referrers.most_common(),
                            countries=countries.most_common(),

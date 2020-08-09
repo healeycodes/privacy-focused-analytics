@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Analytics</title>
-<style>
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-</head>
-<body>
-<h2>Paths</h2>
-<table>
-{% for path in paths %}
-    <tr><td>{{ path }}</td></tr>
-{% endfor %}
-</table>
-<h2>Referrers</h2>
-{% for referrer in referrers %}
-    <tr><td>{{ referrer }}</td></tr>
-{% endfor %}
-<h2>Countries</h2>
-{% for country in countries %}
-    <tr><td>{{ country }}</td></tr>
-{% endfor %}
-<h2>Devices</h2>
-{% for device in devices %}
-    <tr><td>{{ device }}</td></tr>
-{% endfor %}
-<h2>Resolutions</h2>
-{% for resolution in resolutions %}
-    <tr><td>{{ resolution }}</td></tr>
-{% endfor %}
+  <head>
+    <title>Analytics</title>
+    <style>
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ start }} - {{ end }}
+  </h1>
+  <h2>Paths</h2>
+  <table>
+    {% for path in paths %}
+      <tr>
+        <td>{{ path }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <h2>Referrers</h2>
+  <table>
+    {% for referrer in referrers %}
+      <tr>
+        <td>{{ referrer }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <h2>Countries</h2>
+  <table>
+    {% for country in countries %}
+      <tr>
+        <td>{{ country }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <h2>Devices</h2>
+  <table>
+    {% for device in devices %}
+      <tr>
+        <td>{{ device }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <h2>Resolutions</h2>
+  <table>
+    {% for resolution in resolutions %}
+      <tr>
+        <td>{{ resolution }}</td>
+      </tr>
+    {% endfor %}
+  </table>
 </body>
 </html>
