@@ -70,6 +70,10 @@ Download a free [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2
 
 `env FLASK_APP=analytics.py flask run`
 
+The tracking pixel is hosted from `/pixel.gif`.
+
+Analytics can be viewed at `/analytics` and a `start` and `end` (UNIX seconds) can be passed as search parameters to view a time slice. `end` is optional so `/analytics?start=1596363446` works fine.
+
 <br>
 
 ### Possible improvements
