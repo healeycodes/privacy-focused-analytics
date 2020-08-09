@@ -74,7 +74,10 @@ Download a free [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2
 
 The tracking pixel is hosted from `/pixel.gif`.
 
-Analytics can be viewed at `/analytics`. Search parameters can be passed to view a time slice — `start` and `end` (UNIX seconds). `end` is optional so `/analytics?start=1596363446` works fine.
+Analytics can be viewed at `/analytics`. Search parameters can be passed to view a time slice.
+
+- (optional) `start` - The start of the time slice in UNIX seconds (inclusion). Defaults to `0`.
+- (optional) `end` - The end of the time slice in UNIX seconds. Defaults to current time.
 
 <br>
 
