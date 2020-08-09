@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analytics Test Page</title>
+</head>
+<body>
+<script>
+  // The tracking pixel path can be anywhere
+  // but for this experiment it's located on the same host
+  const website = document.location.protocol + "//" + document.location.host
+  const url = new URL(website + "/pixel.gif")
+
+  // '/'
+  url.searchParams.append("path", location.pathname)
+
+  // 'Analytics Test Page'
+  url.searchParams.append("title", document.title)
+
+  // 'https://www.google.com'
+  url.searchParams.append("referrer", document.referrer)
+
+  // '320,568'
+  url.searchParams.append(
+    "resolution",
+    window.screen.width + "," + window.screen.height
+  )
+
+  const img = document.createElement("img")
+  img.src = url
+  // When the element exists in the DOM, the request is made
+  document.body.appendChild(img)
+</script>
+<noscript>
+  <!-- Without JavaScript, less information is available to be sent
+  e.g. just the path and title, set via static template logic -->
+  <img src="/pixel.gif?path=%2F&title=Analytics%20Test%20Page" />
+</noscript>
+</body>
+</html>
