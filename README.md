@@ -6,7 +6,7 @@
 
 I wanted to learn about web analytics so I budgeted myself a few hours and built a small analytics system.
 
-It uses a Flask application and a HTML snippet to collect **anonymous user data**.
+It uses a Flask application with a SQLite database and a HTML snippet to collect **anonymous user data** from any website.
 
 <br>
 
