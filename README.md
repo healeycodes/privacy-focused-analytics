@@ -1,4 +1,4 @@
-## Privacy Focused Analytics From Scratch
+## Privacy Focused Analytics
 
 > My blog post: [Privacy Focused Analytics From Scratch](https://healeycodes.com/privacy-focused-analytics-from-scratch/)
 
