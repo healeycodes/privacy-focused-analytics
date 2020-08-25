@@ -17,6 +17,7 @@ It uses a Flask application with a SQLite database, and a HTML snippet to collec
   - What pages users visit
   - Where users are referred from
   - What browsers and screen sizes are used
+  - Which country the user is from (without an API call)
 - Lets you view analytics from different time slices
 <br>
 
